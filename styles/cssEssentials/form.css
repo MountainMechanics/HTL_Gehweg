@@ -1,3 +1,5 @@
+/*Button CSS*/
+
 .btn-simple{
     background-color: #43b7ac;
     color: white;
@@ -28,6 +30,7 @@
     cursor: pointer;
 }
 
+/*Input CSS*/
 
 input[type=text]{
     width:100%;
@@ -43,4 +46,21 @@ input[type=text]{
 input[type=text]:focus{
     border-color:dodgerBlue;
     box-shadow:0 0 5px 0 dodgerBlue;
+}
+
+/*Searchbar CSS*/
+
+.searchbar{
+    margin: 10px;
+    font-size: 1.8rem;
+}
+
+.searchbar > input[type=text]{
+    height: 100px;
+    font-size: 2rem;
+}
+
+.searchbar > button {
+    width: 200px;
+    font-size: 2.5rem;
 }

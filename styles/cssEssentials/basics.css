@@ -10,22 +10,41 @@
     }
 }
 
-
-.font-basic{
+.font-basic *{
     font-family: 'Open Sans', sans-serif;
 }
 
-.font-header{
+.font-header *{
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
     color: #222222;
- }
+}
+
+.entry-name{
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.entry-author{
+    font-size: 2rem;
+    font-weight: 320;
+}
+
+.entry-description{
+    font-size: 2.2rem;
+    font-weight: 350;
+}
+
+.entry-btn{
+    font-size: 2.3rem;
+    font-weight: 390;
+}
 
 .card{
     width: 1fr;
     padding: 20px;
     margin: 10px;
-    border: lightgray 1px solid;
+    border: lightgray 3px solid;
     border-radius: 5px;
     -webkit-transition: transform, box-shadow 0.5s;
     transition: 0.25s transform, box-shadow ease-out;
@@ -68,10 +87,12 @@ nav{
     top: 0;
     left: 0;
     right: 0;
-    height: 70px;
+    height: 100px;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 5px 0 lightgray;
+    box-shadow: 0 0 10px 0 lightgray;
+
+    font-size: 2.3rem;
 }
 
 nav *{
@@ -88,32 +109,27 @@ nav li a {
 }
 
 #nav-body{
-    margin-top: 80px;
+    margin-top: 115px;
 }
 
 .spacer-xs{
-    width: 100%;
-    height: 1rem;
+    margin-top: 1rem;
 }
 
 .spacer-s{
-    width: 100%;
-    height: 2rem;
+    margin-top: 2rem;
 }
 
 .spacer-m{
-    width: 100%;
-    height: 4rem;
+    margin-top: 4rem;
 }
 
 .spacer-l{
-    width: 100%;
-    height: 8rem;
+    margin-top: 8rem;
 }
 
 .spacer-xl{
-    width: 100%;
-    height: 16rem;
+    margin-top: 16rem;
 }
 
 .spacer-xxl{
