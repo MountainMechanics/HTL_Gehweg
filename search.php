@@ -1,8 +1,12 @@
 <?php
 //TODO: connect to DB
+$conn = new PDO('mysql:host=localhost;dbname=HTL_Gehweg', 'root', '');
+$result = $conn->query('SELECT * from entry');
+echo $result;
 
 if(isset($_POST['query'])){
     //TODO: Filter database entries
+
 }else{
     //TODO: get all DB entries
 }
