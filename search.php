@@ -1,8 +1,17 @@
 <?php
 //TODO: connect to DB
-$conn = new PDO('mysql:host=localhost;dbname=HTL_Gehweg', 'root', '');
-$result = $conn->query('SELECT * from entry');
-echo $result;
+require "db_conn.php";
+
+$sql = "SELECT * from entry";
+//$stmnt = $conn->prepare($sql);
+//$stmnt->bind_param(..., ...);
+$stmnt->execute();
+$stmnt->store_results();
+$stmnt->bind_results($id, $title, $desc, $data, $author);
+$stmnt->fetch();
+$stmnt->close();
+
+$result = mysqli_query($conn, $sql);
 
 if(isset($_POST['query'])){
     //TODO: Filter database entries
@@ -13,16 +22,16 @@ if(isset($_POST['query'])){
 
 //TODO: Loop through entries & echo in this template
 
-$obj = "
+echo "
 <div class='card col'>
     <div class='font-header entry-name card-center'>
-        First entry
+        ".$title."
     </div>
     <section  class='entry-author'>
-        Author A
+        ".$author."
     </section>
     <p class='entry-description spacer-xs'>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, officiis esse. Praesentium voluptate, blanditiis nobis numquam magnam aliquid quaerat, odio inventore, consectetur rerum beatae iste error a id dicta culpa?
+        ".$desc."
     </p>
     <button class='btn-simple spacer-xs entry-btn'>
         Download - 5Mb

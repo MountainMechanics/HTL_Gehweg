@@ -1,0 +1,8 @@
+<?php
+
+$servername = "localhost";
+$username = "";
+$password = "";
+$dbname = "HTL_Gehweg";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
