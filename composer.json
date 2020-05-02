@@ -1,0 +1,16 @@
+{
+    "name": "mountaineer/private",
+    "description": "Fuck u. You´re dumb",
+    "type": "project",
+    "authors": [
+        {
+            "name": "The Mountaineer",
+            "email": "angporo@gmail.com"
+        }
+    ],
+    "require": {
+        "@types/express": "^4.17.3",
+        "express": "^4.17.1",
+        "mongodb": "^3.5.5"
+    }
+}

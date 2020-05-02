@@ -25,19 +25,34 @@ const search = (arr, searchTerm) => {
 
 const refreshEntries = (data) => {
     const entries = document.getElementsByClassName('card');
-    Array.from(entries).forEach(entry =>{
-        entry.style.display = 'none';
+    let entryArr = Array.from(entries);
+    entryArr.forEach(e=>{
+        e.style.display = 'inline';
     });
+    let i = 0;
+    let counter = 0;
+    entryArr.forEach(entry =>{
+        data.forEach(e=>{
+            if(initalData[i][0] !== e[0]){
+                entry.style.display = 'none';
+            }else{
+                counter ++;
+            }
+        });
+        i++;
+    });
+    if(counter == 0 && searchInput.innerText().trim() === ""){
+        entryArr.forEach(e=>{
+            e.style.display = 'inline';
+        });
+    }
+    console.log(initalData[0]);
     console.log(data);
-    data.forEach(row =>{
-        row.style.display = 'inline';
-    });
 }
 
 //Init ---
 const initalData = data();
 
 searchInput.addEventListener('keyup', (e) => {
-    console.log(search(initalData,e.target.value));
     refreshEntries(search(initalData,e.target.value));
 });
